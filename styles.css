@@ -371,27 +371,39 @@ p {
 }
 
 .product-tag {
-  position: relative;
-  z-index: 3;
-  width: min(100%, 305px);
-  aspect-ratio: 1 / 0.98;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  border-radius: 42px 42px 56px 56px;
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, 0.72),
-      rgba(255, 255, 255, 0) 35%
-    ),
-    linear-gradient(145deg, #efe6da, #c8b9aa);
-  color: var(--accent);
-  box-shadow:
-    0 38px 95px rgba(0, 0, 0, 0.42),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.62),
-    inset 0 -18px 35px rgba(80, 57, 39, 0.08);
-  transform: rotate(4deg);
+    position: relative;
+    z-index: 3;
+
+    width: min(100%, 305px);
+    aspect-ratio: 1 / 0.98;
+
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+
+    border-radius: 42px 42px 56px 56px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0) 35%
+        ),
+        linear-gradient(
+            145deg,
+            #efe6da,
+            #c8b9aa
+        );
+
+    color: var(--accent);
+
+    box-shadow:
+        0 38px 95px rgba(0, 0, 0, 0.42),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.62),
+        inset 0 -18px 35px rgba(80, 57, 39, 0.08);
+
+    transform: rotate(4deg);
 }
 
 .product-tag::after {
