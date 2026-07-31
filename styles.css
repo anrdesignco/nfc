@@ -413,10 +413,10 @@ p {
 }
 
 .tag-logo {
-    width: 105px;
+    width: 60px;
     height: auto;
     display: block;
-    margin: 28px auto 22px;
+    margin: 40px auto 22px;
     object-fit: contain;
 }
 
