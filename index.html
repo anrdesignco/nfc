@@ -1,378 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
-    <meta
-        name="description"
-        content="Instructions for programming and using the A&R Design NFC Paw Print Pet Tag."
-    >
+  <meta
+    name="description"
+    content="Setup instructions for the A&R Design NFC Paw Print Pet Tag."
+  >
 
-    <title>A&R Design | NFC Paw Print Setup</title>
+  <meta name="theme-color" content="#111111">
 
-    <style>
-        :root {
-            --background: #f5f5f5;
-            --card: #ffffff;
-            --text: #1d1d1f;
-            --muted: #666666;
-            --border: #e3e3e3;
-            --accent: #111111;
-            --notice: #fff8dc;
-        }
+  <title>NFC Paw Print Setup | A&R Design</title>
 
-        * {
-            box-sizing: border-box;
-        }
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="favicon.svg"
+  >
 
-        body {
-            margin: 0;
-            background: var(--background);
-            color: var(--text);
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-            line-height: 1.6;
-        }
-
-        .page {
-            width: min(760px, calc(100% - 32px));
-            margin: 32px auto;
-        }
-
-        .card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 28px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-        }
-
-        .logo {
-            margin: 0 0 8px;
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            margin: 0 0 8px;
-            font-size: clamp(2rem, 8vw, 3.2rem);
-            line-height: 1.05;
-        }
-
-        h2 {
-            margin-top: 36px;
-            margin-bottom: 12px;
-            font-size: 1.45rem;
-        }
-
-        h3 {
-            margin-top: 0;
-            margin-bottom: 8px;
-        }
-
-        p {
-            margin-top: 8px;
-        }
-
-        .intro {
-            color: var(--muted);
-            font-size: 1.05rem;
-        }
-
-        .notice {
-            margin-top: 22px;
-            padding: 16px;
-            background: var(--notice);
-            border-radius: 12px;
-        }
-
-        .steps {
-            display: grid;
-            gap: 14px;
-            margin-top: 18px;
-        }
-
-        .step {
-            display: grid;
-            grid-template-columns: 42px 1fr;
-            gap: 14px;
-            padding: 16px;
-            border: 1px solid var(--border);
-            border-radius: 14px;
-        }
-
-        .number {
-            display: grid;
-            place-items: center;
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: var(--accent);
-            color: white;
-            font-weight: 800;
-        }
-
-        ul {
-            padding-left: 22px;
-        }
-
-        .button {
-            display: inline-block;
-            margin: 8px 8px 0 0;
-            padding: 12px 16px;
-            border-radius: 10px;
-            background: var(--accent);
-            color: white;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        footer {
-            margin-top: 32px;
-            padding-top: 22px;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 520px) {
-            .page {
-                width: min(100% - 20px, 760px);
-                margin: 10px auto;
-            }
-
-            .card {
-                padding: 22px 18px;
-                border-radius: 14px;
-            }
-        }
-    </style>
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
 </head>
 
 <body>
-    <main class="page">
-        <article class="card">
 
-            <p class="logo">A&amp;R Design</p>
+  <a class="skip-link" href="#main-content">
+    Skip to instructions
+  </a>
 
-            <h1>NFC Paw Print Setup</h1>
+  <!-- HEADER -->
 
-            <p class="intro">
-                Thank you for purchasing an A&amp;R Design NFC Paw Print
-                Pet Tag. Follow the instructions below to program, test
-                and update your tag.
-            </p>
+  <header class="site-header">
 
-            <div class="notice">
-                <strong>Your tag arrives blank.</strong>
-                You control what information is written to it.
-                A&amp;R Design does not collect or store your pet’s
-                personal information.
-            </div>
+    <div class="container header-inner">
 
-            <h2>Before you begin</h2>
+      <a
+        class="brand"
+        href="#top"
+        aria-label="A&R Design NFC Paw Print setup"
+      >
 
-            <p>You will need:</p>
+        <img
+          class="brand-logo"
+          src="images/ar-logo.png"
+          alt="A&R Design"
+        >
 
-            <ul>
-                <li>An NFC-compatible iPhone or Android phone</li>
-                <li>The free NFC Tools app</li>
-                <li>Your A&amp;R Design NFC Paw Print Tag</li>
-            </ul>
+      </a>
 
-            <h2>How to program your tag</h2>
+      <nav class="main-nav" aria-label="Page navigation">
 
-            <div class="steps">
+        <a href="#setup">
+          Setup
+        </a>
 
-                <section class="step">
-                    <div class="number">1</div>
-                    <div>
-                        <h3>Download NFC Tools</h3>
-                        <p>
-                            Install the NFC Tools app from your phone’s
-                            official app store and open it.
-                        </p>
-                    </div>
-                </section>
+        <a href="#scanning">
+          Scanning
+        </a>
 
-                <section class="step">
-                    <div class="number">2</div>
-                    <div>
-                        <h3>Select Write</h3>
-                        <p>
-                            In NFC Tools, open the <strong>Write</strong>
-                            section and select
-                            <strong>Add a record</strong>.
-                        </p>
-                    </div>
-                </section>
+        <a href="#information">
+          What to include
+        </a>
 
-                <section class="step">
-                    <div class="number">3</div>
-                    <div>
-                        <h3>Choose what the tag opens</h3>
-                        <p>
-                            Select a website, contact, phone number,
-                            text message or another available record.
-                        </p>
-                        <p>
-                            For the best lost-pet experience, we recommend
-                            linking to one mobile-friendly pet information
-                            page containing your preferred contact details.
-                        </p>
-                    </div>
-                </section>
+        <a href="#help">
+          Help
+        </a>
 
-                <section class="step">
-                    <div class="number">4</div>
-                    <div>
-                        <h3>Enter your information</h3>
-                        <p>
-                            Enter the information or website address and
-                            save the record.
-                        </p>
-                    </div>
-                </section>
+      </nav>
 
-                <section class="step">
-                    <div class="number">5</div>
-                    <div>
-                        <h3>Write the tag</h3>
-                        <p>
-                            Press <strong>Write</strong>. When prompted,
-                            hold the paw-print tag against your phone’s
-                            NFC scanning area until the app confirms that
-                            writing is complete.
-                        </p>
-                    </div>
-                </section>
+    </div>
 
-                <section class="step">
-                    <div class="number">6</div>
-                    <div>
-                        <h3>Test it</h3>
-                        <p>
-                            Close the app, unlock your phone and scan the
-                            tag again. Confirm that the correct information
-                            opens before attaching the tag to your pet’s
-                            collar.
-                        </p>
-                    </div>
-                </section>
+  </header>
 
-            </div>
 
-            <h2>Where should I scan?</h2>
+  <main id="main-content">
 
-            <p>
-                NFC antenna placement varies by phone. On many iPhones,
-                scanning works best near the upper portion of the phone.
-                On Android phones, the scanning area is commonly near the
-                centre or upper back.
-            </p>
+    <!-- HERO -->
 
-            <p>
-                Move the tag slowly around the back of the phone if it
-                is not detected immediately. Remove thick or metallic
-                phone cases while programming or testing.
-            </p>
+    <section class="hero" id="top">
 
-            <h2>Updating the information</h2>
+      <div class="container hero-grid">
 
-            <p>
-                Open NFC Tools, create the updated record and write it to
-                the tag again. Test the tag after every change.
-            </p>
+        <div class="hero-content">
 
-            <h2>Recommended information</h2>
+          <p class="eyebrow">
+            NFC PAW PRINT PET TAG
+          </p>
 
-            <ul>
-                <li>Pet’s name</li>
-                <li>Owner’s first name</li>
-                <li>Primary phone number</li>
-                <li>Backup emergency contact</li>
-                <li>Relevant medical or care information</li>
-                <li>A short “Please contact my owner” message</li>
-            </ul>
+          <h1>
+            Smarter identification,
+            designed to stay simple.
+          </h1>
 
-            <div class="notice">
-                <strong>Privacy reminder:</strong>
-                Only include information you are comfortable sharing with
-                anyone who scans the tag. Avoid passwords, payment details
-                or other highly sensitive information.
-            </div>
+          <p class="hero-description">
+            Your A&amp;R NFC Paw Print arrives blank and ready
+            to personalize. Use this guide to program it, test
+            it, and keep your pet’s information current.
+          </p>
 
-            <h2>Troubleshooting</h2>
+          <div class="hero-buttons">
 
-            <p><strong>The phone does not detect the tag:</strong></p>
-
-            <ul>
-                <li>Make sure the phone supports NFC.</li>
-                <li>Unlock the phone before scanning.</li>
-                <li>Remove a thick or metallic case.</li>
-                <li>Move the tag around the back of the phone slowly.</li>
-                <li>Confirm NFC is enabled in the phone settings.</li>
-                <li>Try programming or testing it with another phone.</li>
-            </ul>
-
-            <p><strong>The wrong information appears:</strong></p>
-
-            <p>
-                Return to NFC Tools, create the correct record and write
-                the tag again.
-            </p>
-
-            <h2>Need help?</h2>
-
-            <p>
-                Send us a message and let us know which phone model you
-                are using and what happens when you attempt to scan the tag.
-            </p>
-
-            <!-- Replace these placeholder addresses with your real links. -->
-
-            <a
-                class="button"
-                href="https://www.instagram.com/YOUR-INSTAGRAM"
-            >
-                Instagram
+            <a class="button button-primary" href="#setup">
+              Set up your tag
             </a>
 
-            <a
-                class="button"
-                href="https://www.etsy.com/shop/YOUR-ETSY-SHOP"
-            >
-                Etsy Shop
+            <a class="button button-secondary" href="#help">
+              Troubleshooting
             </a>
 
-            <a
-                class="button"
-                href="mailto:YOUR-EMAIL@example.com"
+          </div>
+
+          <p class="privacy-message">
+            A&amp;R Design does not collect or store your pet’s
+            personal information.
+          </p>
+
+        </div>
+
+
+        <div class="hero-visual" aria-hidden="true">
+
+          <div class="signal-ring signal-ring-one"></div>
+          <div class="signal-ring signal-ring-two"></div>
+          <div class="signal-ring signal-ring-three"></div>
+
+          <div class="product-tag">
+
+            <span class="tag-hole"></span>
+
+            <svg
+              class="paw-icon"
+              viewBox="0 0 120 120"
+              role="presentation"
             >
-                Email A&amp;R
-            </a>
 
-            <footer>
-                <p>
-                    A&amp;R Design · Proudly made in Canada
-                </p>
+              <ellipse
+                cx="60"
+                cy="79"
+                rx="29"
+                ry="23"
+                fill="currentColor"
+              />
 
-                <p>
-                    This tag is an identification aid and does not replace
-                    a microchip, licence or secure collar identification.
-                </p>
-            </footer>
+              <ellipse
+                cx="28"
+                cy="53"
+                rx="13"
+                ry="16"
+                transform="rotate(-25 28 53)"
+                fill="currentColor"
+              />
+
+              <ellipse
+                cx="49"
+                cy="31"
+                rx="13"
+                ry="16"
+                transform="rotate(-7 49 31)"
+                fill="currentColor"
+              />
+
+              <ellipse
+                cx="71"
+                cy="31"
+                rx="13"
+                ry="16"
+                transform="rotate(7 71 31)"
+                fill="currentColor"
+              />
+
+              <ellipse
+                cx="92"
+                cy="53"
+                rx="13"
+                ry="16"
+                transform="rotate(25 92 53)"
+                fill="currentColor"
+              />
+
+            </svg>
+
+            <span class="tag-label">
+              NFC READY
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- QUICK FEATURES -->
+
+    <section
+      class="container feature-strip"
+      aria-label="Product benefits"
+    >
+
+      <article class="feature-item">
+
+        <span class="feature-number">
+          01
+        </span>
+
+        <div>
+
+          <h2>
+            Quick setup
+          </h2>
+
+          <p>
+            Ready in just a few minutes.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="feature-item">
+
+        <span class="feature-number">
+          02
+        </span>
+
+        <div>
+
+          <h2>
+            Rewritable
+          </h2>
+
+          <p>
+            Update the information anytime.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="feature-item">
+
+        <span class="feature-number">
+          03
+        </span>
+
+        <div>
+
+          <h2>
+            No subscription
+          </h2>
+
+          <p>
+            No monthly fee from A&amp;R Design.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- SETUP GUIDE -->
+
+    <section class="section container" id="setup">
+
+      <header class="section-header">
+
+        <p class="eyebrow eyebrow-dark">
+          SETUP GUIDE
+        </p>
+
+        <h2>
+          Program your tag in six steps.
+        </h2>
+
+        <p>
+          All you need is an NFC-compatible smartphone,
+          the free NFC Tools app, and your NFC Paw Print tag.
+        </p>
+
+      </header>
+
+
+      <div class="steps-grid">
+
+        <article class="step-card">
+
+          <span class="step-number">
+            01
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path
+                d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"
+              />
+
+              <path d="M9 5h6" />
+              <path d="M10 18h4" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Download NFC Tools
+          </h3>
+
+          <p>
+            Install <strong>NFC Tools</strong> from the Apple
+            App Store or Google Play Store.
+          </p>
 
         </article>
-    </main>
+
+
+        <article class="step-card">
+
+          <span class="step-number">
+            02
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="M12 5v14" />
+              <path d="M5 12h14" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Open the Write tab
+          </h3>
+
+          <p>
+            Open the app, select <strong>Write</strong>,
+            and then choose <strong>Add a record</strong>.
+          </p>
+
+        </article>
+
+
+        <article class="step-card">
+
+          <span class="step-number">
+            03
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="M10 13a5 5 0 0 0 7.1.1l2-2a5 5 0 0 0-7.1-7.1l-1.1 1.1" />
+
+              <path d="M14 11a5 5 0 0 0-7.1-.1l-2 2A5 5 0 0 0 12 20l1.1-1.1" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Choose what opens
+          </h3>
+
+          <p>
+            Select a website, contact card, phone number,
+            text message, or another supported record type.
+          </p>
+
+        </article>
+
+
+        <article class="step-card">
+
+          <span class="step-number">
+            04
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="M4 21h16" />
+
+              <path d="M7 17 17.5 6.5a2.1 2.1 0 0 0-3-3L4 14v3h3Z" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Add your information
+          </h3>
+
+          <p>
+            Enter the information you want someone to see
+            when they scan your pet’s tag.
+          </p>
+
+        </article>
+
+
+        <article class="step-card">
+
+          <span class="step-number">
+            05
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="M8.5 8.5a5 5 0 0 1 0 7" />
+
+              <path d="M5.5 5.5a9 9 0 0 1 0 13" />
+
+              <path d="M15.5 8.5a5 5 0 0 0 0 7" />
+
+              <path d="M18.5 5.5a9 9 0 0 0 0 13" />
+
+              <circle cx="12" cy="12" r="1" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Write to the tag
+          </h3>
+
+          <p>
+            Tap <strong>Write</strong> and hold the paw print
+            against your phone until the success message appears.
+          </p>
+
+        </article>
+
+
+        <article class="step-card">
+
+          <span class="step-number">
+            06
+          </span>
+
+          <div class="step-icon" aria-hidden="true">
+
+            <svg viewBox="0 0 24 24">
+
+              <path d="m5 12 4 4L19 6" />
+
+            </svg>
+
+          </div>
+
+          <h3>
+            Test before use
+          </h3>
+
+          <p>
+            Close the app, unlock your phone, and scan the tag
+            again to confirm the correct information opens.
+          </p>
+
+        </article>
+
+      </div>
+
+
+      <aside class="best-practice">
+
+        <span>
+          BEST PRACTICE
+        </span>
+
+        <p>
+          For the cleanest experience, write one mobile-friendly
+          link containing your pet’s contact and care information.
+          Updating that page later is easier than rewriting several
+          separate records.
+        </p>
+
+      </aside>
+
+    </section>
+
+
+    <!-- QR CODE SECTION -->
+
+    <section class="qr-section">
+
+      <div class="container qr-grid">
+
+        <div class="qr-content">
+
+          <p class="eyebrow">
+            SAVE THIS GUIDE
+          </p>
+
+          <h2>
+            Scan the code anytime you need these instructions.
+          </h2>
+
+          <p>
+            Keep the setup guide close by for future updates,
+            troubleshooting, or when transferring the tag to
+            another pet.
+          </p>
+
+          <p class="qr-address">
+            anrdesignco.github.io/nfc
+          </p>
+
+        </div>
+
+
+        <div class="qr-card">
+
+          <div class="qr-image-wrap">
+
+            <img
+              class="qr-image"
+              src="images/nfc-setup-qr.png"
+              alt="QR code linking to the A&R Design NFC pet tag setup guide"
+            >
+
+          </div>
+
+          <img
+            class="qr-logo"
+            src="images/ar-logo.png"
+            alt="A&R Design"
+          >
+
+          <p>
+            NFC Paw Print Setup
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SCANNING GUIDE -->
+
+    <section class="scanning-section" id="scanning">
+
+      <div class="container scanning-grid">
+
+        <div class="scanning-content">
+
+          <p class="eyebrow">
+            HOW TO SCAN
+          </p>
+
+          <h2>
+            Placement matters.
+          </h2>
+
+          <p class="scanning-intro">
+            NFC antenna placement varies by phone. Move the tag
+            slowly around the back of the device until the phone
+            detects it.
+          </p>
+
+
+          <ul class="scanning-list">
+
+            <li>
+
+              <strong>
+                iPhone
+              </strong>
+
+              <span>
+                Start near the top edge or upper back of the phone.
+              </span>
+
+            </li>
+
+            <li>
+
+              <strong>
+                Android
+              </strong>
+
+              <span>
+                Start near the centre or upper back of the phone.
+              </span>
+
+            </li>
+
+            <li>
+
+              <strong>
+                Before scanning
+              </strong>
+
+              <span>
+                Make sure the phone is unlocked.
+              </span>
+
+            </li>
+
+            <li>
+
+              <strong>
+                If it does not scan
+              </strong>
+
+              <span>
+                Remove thick, magnetic, metallic, or wallet-style
+                phone cases.
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="phone-showcase" aria-hidden="true">
+
+          <div class="phone-signal phone-signal-one"></div>
+          <div class="phone-signal phone-signal-two"></div>
+
+          <div class="phone">
+
+            <div class="phone-speaker"></div>
+
+            <div class="phone-screen">
+
+              <p class="phone-brand">
+                A&amp;R DESIGN
+              </p>
+
+              <svg
+                class="phone-paw"
+                viewBox="0 0 120 120"
+                role="presentation"
+              >
+
+                <ellipse
+                  cx="60"
+                  cy="79"
+                  rx="29"
+                  ry="23"
+                  fill="currentColor"
+                />
+
+                <ellipse
+                  cx="28"
+                  cy="53"
+                  rx="13"
+                  ry="16"
+                  transform="rotate(-25 28 53)"
+                  fill="currentColor"
+                />
+
+                <ellipse
+                  cx="49"
+                  cy="31"
+                  rx="13"
+                  ry="16"
+                  transform="rotate(-7 49 31)"
+                  fill="currentColor"
+                />
+
+                <ellipse
+                  cx="71"
+                  cy="31"
+                  rx="13"
+                  ry="16"
+                  transform="rotate(7 71 31)"
+                  fill="currentColor"
+                />
+
+                <ellipse
+                  cx="92"
+                  cy="53"
+                  rx="13"
+                  ry="16"
+                  transform="rotate(25 92 53)"
+                  fill="currentColor"
+                />
+
+              </svg>
+
+
+              <div class="pet-profile">
+
+                <small>
+                  PET PROFILE
+                </small>
+
+                <strong>
+                  Maya
+                </strong>
+
+                <span>
+                  Please contact my owner.
+                </span>
+
+                <div class="profile-line profile-line-long"></div>
+                <div class="profile-line profile-line-short"></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- WHAT TO INCLUDE -->
+
+    <section class="section container" id="information">
+
+      <header class="section-header section-header-narrow">
+
+        <p class="eyebrow eyebrow-dark">
+          WHAT TO INCLUDE
+        </p>
+
+        <h2>
+          Useful information without oversharing.
+        </h2>
+
+      </header>
+
+
+      <div class="information-grid">
+
+        <article class="information-card">
+
+          <p class="card-label">
+            RECOMMENDED
+          </p>
+
+          <h3>
+            Keep it practical
+          </h3>
+
+          <ul>
+
+            <li>
+              Your pet’s name
+            </li>
+
+            <li>
+              Owner’s first name
+            </li>
+
+            <li>
+              Primary phone number
+            </li>
+
+            <li>
+              Backup emergency contact
+            </li>
+
+            <li>
+              Important medical or care information
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <article class="information-card">
+
+          <p class="card-label">
+            PRIVACY
+          </p>
+
+          <h3>
+            Only share what feels safe
+          </h3>
+
+          <ul>
+
+            <li>
+              Avoid passwords or account credentials
+            </li>
+
+            <li>
+              Avoid payment information
+            </li>
+
+            <li>
+              Think carefully before sharing your full home address
+            </li>
+
+            <li>
+              Assume that anyone may scan the tag
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <article class="information-card information-card-accent">
+
+          <p class="card-label">
+            KEEP IT CURRENT
+          </p>
+
+          <h3>
+            Test it every few months
+          </h3>
+
+          <p>
+            Update your tag whenever your phone number,
+            emergency contact, or pet information changes.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- TROUBLESHOOTING -->
+
+    <section class="section container" id="help">
+
+      <header class="section-header">
+
+        <p class="eyebrow eyebrow-dark">
+          TROUBLESHOOTING
+        </p>
+
+        <h2>
+          Most issues are easy to fix.
+        </h2>
+
+      </header>
+
+
+      <div class="faq-list">
+
+        <details>
+
+          <summary>
+            The phone does not detect the tag.
+          </summary>
+
+          <p>
+            Make sure the phone supports NFC, unlock the screen,
+            remove thick or metallic phone cases, and slowly move
+            the tag around the back of the phone. On some Android
+            devices, NFC must be enabled manually in Settings.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            The tag will not write.
+          </summary>
+
+          <p>
+            Confirm that you selected <strong>Write</strong> in
+            NFC Tools. Wait for the app to prompt you before
+            touching the tag to the phone, and hold the tag still
+            until the success message appears.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            The wrong information opens.
+          </summary>
+
+          <p>
+            Return to NFC Tools, create the corrected record,
+            and write it to the tag again. Always test the tag
+            after making any changes.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Can I rewrite the tag?
+          </summary>
+
+          <p>
+            Yes. The tag can be overwritten with new information
+            unless it has been permanently locked through the app.
+          </p>
+
+        </details>
+
+
+        <details>
+
+          <summary>
+            Does this replace my pet’s microchip?
+          </summary>
+
+          <p>
+            No. The NFC tag is an additional identification aid.
+            It does not replace a registered microchip, pet licence,
+            or secure physical identification.
+          </p>
+
+        </details>
+
+      </div>
+
+    </section>
+
+
+    <!-- SUPPORT -->
+
+    <section class="container support-section">
+
+      <img
+        class="support-logo"
+        src="images/ar-logo.png"
+        alt="A&R Design"
+      >
+
+      <p class="eyebrow">
+        NEED HELP?
+      </p>
+
+      <h2>
+        Send us your phone model and tell us what happens when you scan.
+      </h2>
+
+      <p>
+        We’ll help you get it sorted.
+      </p>
+
+
+      <div class="support-buttons">
+
+        <a
+          class="button button-light"
+          href="https://www.instagram.com/YOUR-INSTAGRAM/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Message us on Instagram
+        </a>
+
+        <a
+          class="button button-outline-light"
+          href="mailto:YOUR-EMAIL@example.com"
+        >
+          Email A&amp;R Design
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <img
+          class="footer-logo"
+          src="images/ar-logo.png"
+          alt="A&R Design"
+        >
+
+        <p>
+          Thoughtfully designed and proudly made in Canada.
+        </p>
+
+      </div>
+
+
+      <nav class="footer-links" aria-label="Footer navigation">
+
+        <a href="#setup">
+          Setup
+        </a>
+
+        <a href="#scanning">
+          Scanning
+        </a>
+
+        <a href="#help">
+          Help
+        </a>
+
+        <a
+          href="https://www.instagram.com/YOUR-INSTAGRAM/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+      </nav>
+
+
+      <p class="copyright">
+        © <span id="current-year"></span> A&amp;R Design.
+        All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
 </body>
 </html>
