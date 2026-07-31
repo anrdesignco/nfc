@@ -412,8 +412,12 @@ p {
   box-shadow: inset 0 0 0 5px #c1b2a3;
 }
 
-.paw-icon {
-  width: 118px;
+.tag-logo {
+    width: 105px;
+    height: auto;
+    display: block;
+    margin: 28px auto 22px;
+    object-fit: contain;
 }
 
 .tag-label {
